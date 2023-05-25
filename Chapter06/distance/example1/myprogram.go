@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/gonum/floats"
+	"gonum.org/v1/gonum/floats"
 )
 
 func main() {

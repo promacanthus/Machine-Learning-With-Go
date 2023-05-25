@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/kniren/gota/dataframe"
+	"github.com/go-gota/gota/dataframe"
 	"github.com/sajari/regression"
 )
 

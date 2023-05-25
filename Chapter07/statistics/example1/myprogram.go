@@ -6,8 +6,8 @@ import (
 	"math"
 	"os"
 
-	"github.com/gonum/stat"
-	"github.com/kniren/gota/dataframe"
+	"github.com/go-gota/gota/dataframe"
+	"gonum.org/v1/gonum/stat"
 )
 
 func main() {

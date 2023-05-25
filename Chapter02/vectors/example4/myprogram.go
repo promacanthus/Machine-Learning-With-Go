@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/gonum/blas/blas64"
-	"github.com/gonum/matrix/mat64"
+	"gonum.org/v1/gonum/blas/blas64"
+	"gonum.org/v1/gonum/mat"
 )
 
 func main() {

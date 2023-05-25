@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/gonum/stat"
-	"github.com/gonum/stat/distuv"
+	"gonum.org/v1/gonum/stat"
+	"gonum.org/v1/gonum/stat/distuv"
 )
 
 func main() {
