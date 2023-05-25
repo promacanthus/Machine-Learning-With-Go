@@ -23,11 +23,7 @@ func main() {
 	irisDF := dataframe.ReadCSV(irisFile)
 
 	// Create the plot and set its title and axis label.
-	p, err := plot.New()
-	if err != nil {
-		log.Fatal(err)
-	}
-
+	p := plot.New()
 	p.Title.Text = "Box plots"
 	p.Y.Label.Text = "Values"
 
