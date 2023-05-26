@@ -3,7 +3,6 @@ module promacanthus/Machine-Learning-With-Go
 go 1.20
 
 require (
-	github.com/berkmancenter/ridge v0.0.0-20160817211126-84766bc56b56
 	github.com/boltdb/bolt v1.3.1
 	github.com/go-gota/gota v0.12.0
 	github.com/lib/pq v1.10.9
@@ -12,6 +11,7 @@ require (
 	github.com/montanaflynn/stats v0.7.1
 	github.com/pachyderm/pachyderm v1.13.4
 	github.com/patrickmn/go-cache v2.1.0+incompatible
+	github.com/promacanthus/ridge v0.0.0-20230526113327-d5d89e039a1c
 	github.com/sajari/regression v1.0.1
 	github.com/sjwhitworth/golearn v0.0.0-20221228163002-74ae077eafb2
 	gonum.org/v1/gonum v0.13.0
@@ -41,8 +41,6 @@ require (
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/gonum/blas v0.0.0-20181208220705-f22b278b28ac // indirect
-	github.com/gonum/floats v0.0.0-20181209220543-c233463c7e82 // indirect
-	github.com/gonum/internal v0.0.0-20181124074243-f884aa714029 // indirect
 	github.com/gonum/lapack v0.0.0-20181123203213-e4cdc5a0bff9 // indirect
 	github.com/gonum/matrix v0.0.0-20181209220409-c518dec07be9 // indirect
 	github.com/google/go-cmp v0.5.8 // indirect

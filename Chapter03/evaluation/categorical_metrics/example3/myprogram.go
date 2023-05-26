@@ -15,10 +15,10 @@ func main() {
 
 	// Calculate the true positive rates (recalls) and
 	// false positive rates.
-	tpr, fpr := stat.ROC(0, scores, classes, nil)
+	tpr, fpr, _ := stat.ROC(nil, scores, classes, nil)
 
 	// Compute the Area Under Curve.
-	auc := integrate.Trapezoidal(fpr, tpr)
+	auc := integrate.Trapezoidal(tpr, fpr)
 
 	// Output the results to standard out.
 	fmt.Printf("true  positive rate: %v\n", tpr)

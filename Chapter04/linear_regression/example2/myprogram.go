@@ -34,10 +34,7 @@ func main() {
 		}
 
 		// Make a plot and set its title.
-		p, err := plot.New()
-		if err != nil {
-			log.Fatal(err)
-		}
+		p := plot.New()
 		p.Title.Text = fmt.Sprintf("Histogram of a %s", colName)
 
 		// Create a histogram of our values drawn

@@ -80,7 +80,7 @@ func main() {
 
 	// Form the matrices that will be input to our regression.
 	features := mat.NewDense(len(rawCSVData), 4, featureData)
-	y := mat.NewVector(len(rawCSVData), yData)
+	y := mat.NewVecDense(len(rawCSVData), yData)
 
 	if features != nil && y != nil {
 		fmt.Println("Matrices formed for ridge regression")
