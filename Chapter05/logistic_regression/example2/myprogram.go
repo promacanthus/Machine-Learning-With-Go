@@ -13,16 +13,17 @@ import (
 func main() {
 
 	// Create a new plot.
-	p, err := plot.New()
-	if err != nil {
-		log.Fatal(err)
-	}
+	p := plot.New()
 	p.Title.Text = "Logistic Function"
 	p.X.Label.Text = "x"
 	p.Y.Label.Text = "f(x)"
 
 	// Create the plotter function.
-	logisticPlotter := plotter.NewFunction(func(x float64) float64 { return logistic(x) })
+	logisticPlotter := plotter.NewFunction(
+		func(x float64) float64 {
+			return logistic(x)
+		},
+	)
 	logisticPlotter.Color = color.RGBA{B: 255, A: 255}
 
 	// Add the plotter function to the plot.

@@ -58,10 +58,7 @@ func main() {
 	}
 
 	// Create the plot.
-	p, err := plot.New()
-	if err != nil {
-		log.Fatal(err)
-	}
+	p := plot.New()
 	p.X.Label.Text = "Speeding"
 	p.Y.Label.Text = "Distance"
 	p.Add(plotter.NewGrid())

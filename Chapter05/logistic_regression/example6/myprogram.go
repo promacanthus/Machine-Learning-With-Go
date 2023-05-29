@@ -73,7 +73,7 @@ func main() {
 	}
 
 	// Form a matrix from the features.
-	features := mat64.NewDense(len(rawCSVData)-1, 2, featureData)
+	features := mat.NewDense(len(rawCSVData)-1, 2, featureData)
 
 	// Train the logistic regression model.
 	weights := logisticRegression(features, labels, 1000, 0.3)
@@ -91,7 +91,7 @@ func logistic(x float64) float64 {
 
 // logisticRegression fits a logistic regression model
 // for the given data.
-func logisticRegression(features *mat64.Dense, labels []float64, numSteps int, learningRate float64) []float64 {
+func logisticRegression(features *mat.Dense, labels []float64, numSteps int, learningRate float64) []float64 {
 
 	// Initialize random weights.
 	_, numWeights := features.Dims()
@@ -100,7 +100,7 @@ func logisticRegression(features *mat64.Dense, labels []float64, numSteps int, l
 	s := rand.NewSource(time.Now().UnixNano())
 	r := rand.New(s)
 
-	for idx, _ := range weights {
+	for idx := range weights {
 		weights[idx] = r.Float64()
 	}
 
@@ -114,7 +114,7 @@ func logisticRegression(features *mat64.Dense, labels []float64, numSteps int, l
 		for idx, label := range labels {
 
 			// Get the features corresponding to this label.
-			featureRow := mat64.Row(nil, idx, features)
+			featureRow := mat.Row(nil, idx, features)
 
 			// Calculate the error for this iteration's weights.
 			pred := logistic(featureRow[0]*weights[0] + featureRow[1]*weights[1])
