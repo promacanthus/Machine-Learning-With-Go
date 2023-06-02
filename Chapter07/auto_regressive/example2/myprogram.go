@@ -50,10 +50,8 @@ func main() {
 	}
 
 	// Create the plot.
-	p, err := plot.New()
-	if err != nil {
-		log.Fatal(err)
-	}
+	
+	p := plot.New()
 	p.X.Label.Text = "time"
 	p.Y.Label.Text = "log(differenced passengers)"
 	p.Add(plotter.NewGrid())

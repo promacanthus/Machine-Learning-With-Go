@@ -6,11 +6,11 @@ import (
 	"os"
 
 	"github.com/go-gota/gota/dataframe"
+	"gonum.org/v1/gonum/stat"
 	"gonum.org/v1/plot"
 	"gonum.org/v1/plot/plotter"
 	"gonum.org/v1/plot/plotutil"
 	"gonum.org/v1/plot/vg"
-	"gonum.org/v1/gonum/stat"
 )
 
 func main() {
@@ -29,11 +29,7 @@ func main() {
 	passengers := passengersDF.Col("log_differenced_passengers").Float()
 
 	// Create a new plot, to plot our autocorrelations.
-	p, err := plot.New()
-	if err != nil {
-		log.Fatal(err)
-	}
-
+	p := plot.New()
 	p.Title.Text = "Autocorrelations for log(differenced passengers)"
 	p.X.Label.Text = "Lag"
 	p.Y.Label.Text = "ACF"

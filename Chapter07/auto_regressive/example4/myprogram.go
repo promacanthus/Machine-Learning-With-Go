@@ -29,11 +29,7 @@ func main() {
 	passengers := passengersDF.Col("log_differenced_passengers").Float()
 
 	// Create a new plot, to plot our autocorrelations.
-	p, err := plot.New()
-	if err != nil {
-		log.Fatal(err)
-	}
-
+	p := plot.New()
 	p.Title.Text = "Partial Autocorrelations for log(differenced passengers)"
 	p.X.Label.Text = "Lag"
 	p.Y.Label.Text = "PACF"

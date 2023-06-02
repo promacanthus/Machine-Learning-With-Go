@@ -118,10 +118,7 @@ func main() {
 	fmt.Printf("\nMAE = %0.2f\n\n", mAE)
 
 	// Create the plot.
-	p, err := plot.New()
-	if err != nil {
-		log.Fatal(err)
-	}
+	p := plot.New()
 	p.X.Label.Text = "time"
 	p.Y.Label.Text = "passengers"
 	p.Add(plotter.NewGrid())

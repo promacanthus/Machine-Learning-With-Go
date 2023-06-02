@@ -29,11 +29,7 @@ func main() {
 	passengers := passengersDF.Col("AirPassengers").Float()
 
 	// Create a new plot, to plot our autocorrelations.
-	p, err := plot.New()
-	if err != nil {
-		log.Fatal(err)
-	}
-
+	p := plot.New()
 	p.Title.Text = "Autocorrelations for AirPassengers"
 	p.X.Label.Text = "Lag"
 	p.Y.Label.Text = "ACF"
