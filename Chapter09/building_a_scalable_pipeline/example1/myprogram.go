@@ -33,7 +33,7 @@ func main() {
 	// Now, we will list all the current data repositories
 	// on the Pachyderm cluster as a sanity check. We
 	// should now have two data repositories.
-	repos, err := c.ListRepo(nil)
+	repos, err := c.ListRepo()
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -95,7 +95,7 @@ func main() {
 	modelInfo := ModelInfo{
 		Intercept: r.Coeff(0),
 		Coefficients: []CoefficientInfo{
-			CoefficientInfo{
+			{
 				Name:        "bmi",
 				Coefficient: r.Coeff(1),
 			},
